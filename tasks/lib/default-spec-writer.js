@@ -75,7 +75,7 @@ function formatFileList(options) {
 						+ optionalValue(rpmFile.username) + ',' 
 						+ optionalValue(rpmFile.groupname) + ') ';
 				}
-				str += '"' + unixifyPath(path.join(path.sep, rpmFile.dest, rpmFile.path)) + '"\n';
+				str += '"' + unixifyPath(rpmFile.dest) + '"\n';
 //			} else {
 //				str += '%dir "' + unixifyPath(path.join(path.sep, rpmFile.dest + rpmFile.path)) + '"\n';
 //			}
@@ -119,7 +119,7 @@ module.exports = function(options, callback) {
 	
 	src += formatField('URL', options.homepage);
 	src += formatField('Summary', options.summary);
-	src += formatField('License', optionalValue(options.license, options.licenses[0].type));
+	src += formatField('License', optionalValue(options.license, options.licenses ? options.licenses[0].type : undefined));
 	src += formatField('Distribution', options.distribution);
 	src += formatField('Vendor', options.vendor);
 	src += formatField('Group', options.group);

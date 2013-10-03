@@ -80,7 +80,7 @@ function copyFilesToPack(grunt, buildPath, filesToPack) {
 	return function(callback) {
 		grunt.util.async.forEach(filesToPack, function(fileConfig, callback) {
 			try {
-				var filepathDest = path.join(buildPath, fileConfig.dest, fileConfig.path);
+				var filepathDest = path.join(buildPath, fileConfig.dest);
 				
 				if (grunt.file.isDir(fileConfig.src)) {
 					if (fileConfig.directory) {

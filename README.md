@@ -87,7 +87,13 @@ Your project's version, used in the `Version` field for the spec file.
 Type: `Boolean`
 Default value: `false`
 
-Flag to indicate whether the generated RPM will be have a `Release` number set to `1` or to `SNAPSHOT+timestamp`.
+Flag to indicate whether the generated RPM will be have a `Release` number set to `options.buildNumber` or `1`. If release is false, `SNAPSHOT+timestamp` is used.
+
+#### options.buildNumber
+Type: `String`
+Default value: `undefned`
+
+The build number of a release build.
 
 #### options.homepage
 Type: `String`

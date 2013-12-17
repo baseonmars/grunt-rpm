@@ -112,7 +112,7 @@ module.exports = function(options, callback) {
 	src += formatField('Version', options.version);
 	src += 'Release: ';
 	if (options.release) {
-		src += options.buildNumber + '\n' || '1\n';
+		src += typeof options.release "boolean" ? '1\n' : options.release + '\n';
 	} else {
 		src += 'SNAPSHOT' + formatTimestamp(new Date()) + '\n';
 	}

@@ -89,12 +89,6 @@ Default value: `false`
 
 Flag to indicate whether the generated RPM will be have a `Release` number set to `options.buildNumber` or `1`. If release is false, `SNAPSHOT+timestamp` is used.
 
-#### options.buildNumber
-Type: `String`
-Default value: `undefned`
-
-The build number of a release build.
-
 #### options.homepage
 Type: `String`
 Default value: `package.homepage`
